@@ -45,6 +45,7 @@ return array(
     'App\\Http\\Requests\\UserRequest' => $baseDir . '/app/Http/Requests/UserRequest.php',
     'App\\Http\\Requests\\UserUpdateRequest' => $baseDir . '/app/Http/Requests/UserUpdateRequest.php',
     'App\\Models\\Categoria' => $baseDir . '/app/Models/Categoria.php',
+    'App\\Models\\Curso' => $baseDir . '/app/Models/Curso.php',
     'App\\Models\\Log' => $baseDir . '/app/Models/Log.php',
     'App\\Models\\Produto' => $baseDir . '/app/Models/Produto.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',

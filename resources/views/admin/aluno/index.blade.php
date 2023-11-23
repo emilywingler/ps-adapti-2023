@@ -30,7 +30,7 @@
                                         </th>
                                     </thead>
                                     <tbody>
-                                        @foreach ($alunos as $produto)
+                                        @foreach ($alunos as $aluno)
                                             <tr>
                                                 <td>{{ $aluno->id }}</td>
                                                 <td>{{ $aluno->nome }}</td>
