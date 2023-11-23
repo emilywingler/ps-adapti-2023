@@ -27,6 +27,7 @@ class CursoController extends Controller
     }
 
 
+
     public function create()
     {
         return view('admin.curso.crud');
