@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Categoria;
+use App\Http\Requests\StoreCursoRequest;
 
 use App\Models\Curso;
 
@@ -33,8 +33,14 @@ class CursoController extends Controller
         return view('admin.curso.crud');
     }
 
+    public function store(StoreCursoRequest $request)
+    {
+        $data = $request->all(); //Todos os dados que a pessoa criou
+        $this->cursos->create($data);
+        return redirect()->route('curso.index')->with('success', 'Curso cadastrado com sucesso.');
+    }
 
-    public function store(Request $request)
+    public function show($id)
     {
     }
 
