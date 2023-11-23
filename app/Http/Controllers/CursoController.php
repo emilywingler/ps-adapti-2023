@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests\StoreCursoRequest;
 
+use App\Http\Requests\UpdateCursoRequest;
+
 use App\Models\Curso;
 
 class CursoController extends Controller
@@ -42,17 +44,28 @@ class CursoController extends Controller
 
     public function show($id)
     {
+        $curso = $this->cursos->find($id);
+        return response()->json($curso);
     }
 
     public function edit($id)
     {
+        $curso = $this->cursos->find($id); //Quero editar um curso não uma lista de cursos
+        return view('admin.curso.crud', compact('curso'));
     }
 
-    public function update(Request $request, $id)
+    public function update(UpdateCursoRequest $request, $id)
     {
+        $data = $request->all();
+        $curso = $this->cursos->find($id);
+        $curso->update($data);
+        return redirect()->route('curso.index')->with('success', 'Curso editado com sucesso.');
     }
 
     public function destroy($id)
     {
+        // $curso = $this->cursos->find($id);
+        // $curso->delete();
+        // return redirect()->route('curso.index')->with('success', 'Curso excluído com sucesso.');
     }
 }

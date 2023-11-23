@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 
 
-class StoreCursoRequest extends FormRequest
+class UpdateCursoRequest extends FormRequest
 {
   /**
    * Determine if the user is authorized to make this request.
@@ -33,7 +33,7 @@ class StoreCursoRequest extends FormRequest
   {
     return [
       'curso.required' => "O campo precisa ser informado!",
-      'curso.max' => "O campo deve ter no máximo 100 caracteres",
+      'curso.max' => "O campo deve ter no máximo 100 caracteres"
     ];
   }
 }
