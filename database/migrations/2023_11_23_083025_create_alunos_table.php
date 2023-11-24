@@ -16,8 +16,9 @@ return new class extends Migration
         Schema::create('alunos', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->string('curso');
-            $table->text('descrição');
+            $table->foreignId('curso')->constrained('cursos')->onDelete('cascade');
+            $table->text('descrição')->nullable();
+            $table->string('imagem');
             $table->boolean('formado?');
             $table->timestamps();
         });
