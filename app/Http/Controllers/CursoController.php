@@ -64,8 +64,8 @@ class CursoController extends Controller
 
     public function destroy($id)
     {
-        // $curso = $this->cursos->find($id);
-        // $curso->delete();
-        // return redirect()->route('curso.index')->with('success', 'Curso excluído com sucesso.');
+        $curso = $this->cursos->find($id);
+        $curso->delete();
+        return redirect()->route('curso.index')->with('success', 'Curso excluído com sucesso.');
     }
 }
