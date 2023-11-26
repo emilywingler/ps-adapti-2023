@@ -14,6 +14,11 @@ class Aluno extends Model
         'curso',
         'descrição',
         'imagem',
-        'formado?',
+        'contratado?',
     ];
+
+    public function curso()
+    {
+        return $this->belongsTo(Cursos::class, 'curso');
+    }
 }
