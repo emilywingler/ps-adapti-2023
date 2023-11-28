@@ -45,6 +45,7 @@ Route::middleware('locale')->group(function () {
         Route::resource('aluno', AlunoController::class);
 
 
+
         //Rotas para perfil do usuário
         Route::controller(ProfileController::class)->name('profile.')->group(function () {
             Route::get('profile', 'edit')->name('edit');

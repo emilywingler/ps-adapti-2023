@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('alunos', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->foreignId('curso')->constrained('cursos')->onDelete('cascade');
-            $table->text('descrição')->nullable();
+            $table->foreignId('curso_id')->constrained('cursos')->onDelete('cascade');
+            $table->text('descricao')->nullable();
             $table->string('imagem');
-            $table->boolean('contratado?');
+            $table->boolean('contratado')->default(false);
             $table->timestamps();
         });
     }

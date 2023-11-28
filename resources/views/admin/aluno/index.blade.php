@@ -158,7 +158,7 @@
                 $("#detalhes-nome").val(resposta.nome);
                 $("#detalhes-contratado").val(resposta.contratado);
                 $("#detalhes-descricao").val(resposta.descricao);
-                $("#detalhes-curso").val(resposta.curso);
+                $("#detalhes-curso").val(resposta.curso.curso);
                 $("#detalhes-imagem").attr('src', '/storage/' + resposta.imagem);
             });
         })
